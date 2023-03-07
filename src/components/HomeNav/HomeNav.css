@@ -1,0 +1,33 @@
+.home-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem 2rem;
+    background-color: rgb(63, 71, 81);
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.logo a {
+    color: white;
+    font-family: cursive;
+    font-size: 2rem;
+    margin: 0;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.logo a:hover {
+    color: rgb(246, 67, 67);
+}
+
+.login {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(246, 67, 67);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: .6rem .9rem;
+    transition: all .3s;
+}
