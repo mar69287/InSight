@@ -1,43 +1,51 @@
 import { Component } from 'react'
 import { signUp } from '../../utilities/users-service'
+import { Link } from 'react-router-dom';
 
 export default class SignUpForm extends Component {
   state = {
-      name: '',
-      email: '',
-      password: '',
-      confirm: '',
-      error: ''
+    name: '',
+    email: '',
+    password: '',
+    confirm: '',
+    error: ''
   }
 
   handleChange = (evt) => {
-      this.setState({
-          [evt.target.name]: evt.target.value,
-          error: ''
-      })
+    this.setState({
+      [evt.target.name]: evt.target.value,
+      error: ''
+    })
   }
 
   handleSubmit = async (evt) => {
-      evt.preventDefault();
-      try {
-        const formData = {
-          name: this.state.name,
-          email: this.state.email,
-          password: this.state.password
-        }
-        const user = await signUp(formData)
-        this.props.setUser(user)
-      } catch {
-        this.setState({ error: 'Sign Up Failed - Try Again' })
+    evt.preventDefault();
+    try {
+      const formData = {
+        name: this.state.name,
+        email: this.state.email,
+        password: this.state.password
       }
-  } 
+      const user = await signUp(formData)
+      this.props.setUser(user)
+    } catch {
+      this.setState({ error: 'Sign Up Failed - Try Again' })
+    }
+  }
 
   render() {
     const disable = this.state.password !== this.state.confirm;
     return (
-      <div>
+      <div className='signup-container'>
+        <nav className='home-nav'>
+          <div className="logo">
+            <h1>InSight</h1>
+          </div>
+          <Link to="/login" className="login">Login</Link>
+        </nav>
         <div className="form-container">
           <form autoComplete="off" onSubmit={this.handleSubmit}>
+            <p>Sign Up</p>
             <label>Name</label>
             <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
             <label>Email</label>

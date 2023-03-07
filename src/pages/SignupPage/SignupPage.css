@@ -1,0 +1,68 @@
+.signup-container {
+    margin-top: 70px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+}
+
+.home-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    padding: .6rem 2rem;
+    background-color: rgb(63, 71, 81);
+    width: 100%;
+}
+
+form p {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.form-container {
+    background-color: rgb(47, 56, 65);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    color: rgb(161, 183, 204);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+    background-color: rgb(246, 67, 67);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #16a085;
+}

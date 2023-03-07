@@ -1,4 +1,6 @@
 .App {
+    margin-top: 70px;
+    height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;

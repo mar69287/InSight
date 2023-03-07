@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { getUser } from '../../utilities/users-service'
-import SignupPage from '../SignupPage/SignUp';
+import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import HomePage from '../HomePage/HomePage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';

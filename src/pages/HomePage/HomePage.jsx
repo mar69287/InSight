@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './HomePage.css';
 
-export default function NewOrderPage() {
+export default function HomePage() {
     return (
         <>
             <nav className='home-nav'>
