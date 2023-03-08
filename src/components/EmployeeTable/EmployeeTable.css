@@ -1,0 +1,23 @@
+.employee-container {
+    background-color: rgb(47, 56, 65);
+    color: rgb(125, 138, 153);
+    width: 60%;
+    padding: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid rgb(246, 67, 67);
+}
+
+tr:hover {
+    background-color: rgb(246, 67, 67);
+    color: white;
+}

@@ -19,7 +19,7 @@ export default function CompaniesPage() {
 
             <div className="company-index">
                 {companies.map((company, idx) => (
-                    <Link to="/dashboard">
+                    <Link to={`/companies/${company._id}`} >
                         <div className="company-container" key={idx}>
                             <h1>{company.name}</h1>
                             <div>

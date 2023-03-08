@@ -1,5 +1,5 @@
 .company-index {
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -17,10 +17,10 @@
     padding: 1.2rem;
     background-color: rgb(47, 56, 65);
     height: 12rem;
-    min-width: 17rem;
-    max-width: 19rem;
+    width: 17rem;
+    /* max-width: 19rem; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .company-container h1 {

@@ -1,0 +1,60 @@
+.company-detail {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.company-detail>h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.money {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.money div {
+    background-color: rgb(47, 56, 65);
+    height: 10rem;
+    width: 12rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.money div * {
+    margin: 0;
+}
+
+.money div h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.company-detail a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(246, 67, 67);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: .6rem .9rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    transition: all .3s;
+}
+
+.company-detail a:hover {
+    opacity: .8;
+}

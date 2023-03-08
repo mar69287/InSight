@@ -8,3 +8,12 @@ export async function createCompany(companyData) {
 export async function getCompanies() {
     return sendRequest(BASE_URL)
 }
+
+export async function getCompany(id) {
+    return sendRequest(`${BASE_URL}/${id}`)
+}
+
+export async function updateCompany(id, updatedData) {
+    // console.log('editingggg')
+    return sendRequest(`${BASE_URL}/${id}`, 'PUT', updatedData)
+}
