@@ -2,4 +2,8 @@
     height: 100%;
     margin-left: 15rem;
     width: calc(100vw - 15rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
