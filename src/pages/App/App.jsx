@@ -6,9 +6,11 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import HomePage from '../HomePage/HomePage';
 import DashboardPage from '../DashboardPage/DashboardPage';
+import CompaniesPage from '../CompaniesPage/CompaniesPage';
+import CreateCompanyPage from '../CreateCompanyPage/CreateCompanyPage';
 import HomeNav from '../../components/HomeNav/HomeNav';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+// import NewOrderPage from '../NewOrderPage/NewOrderPage';
+// import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar'
 import SideMenu from '../../components/SideMenu/SideMenu'
 
@@ -24,6 +26,8 @@ export default function App() {
             <SideMenu />
             <Routes>
               <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/companies" element={<CompaniesPage />} />
+              <Route path="/companies/create" element={<CreateCompanyPage user={user} />} />
               {/* <Route path="/companies" element={<CompaniesPage />} />
               <Route path="/companies/create" element={<DashboardPage />} /> */}
               <Route path="/*" element={<Navigate to="/dashboard" />} />
