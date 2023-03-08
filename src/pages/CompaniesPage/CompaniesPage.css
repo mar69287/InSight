@@ -1,5 +1,74 @@
-.dashboard-home {
-    height: 100%;
-    margin-left: 15rem;
-    width: calc(100vw - 15rem);
+.company-index {
+    padding: 2rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.company-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.2rem;
+    background-color: rgb(47, 56, 65);
+    height: 12rem;
+    min-width: 17rem;
+    max-width: 19rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 3rem;
+}
+
+.company-container h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+.company-container>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.company-container>div div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.company-container>div div>p:first-child {
+    margin-right: 1rem;
+}
+
+.company-container p {
+    margin: 0;
+    font-size: 1.1rem;
+    display: inline;
+    transition: 1s all;
+}
+
+.company-index a {
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.company-index a:hover {
+    opacity: .7;
+}
+
+.company-index a h1 {
+    transition: all .3s;
+}
+
+.company-index a:hover h1 {
+    color: rgb(246, 67, 67);
 }

@@ -4,6 +4,6 @@ const companiesCtrl = require('../../controllers/api/companies');
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 router.post('/create', ensureLoggedIn, companiesCtrl.create);
-// router.get('/', ensureLoggedIn, notesCtrl.index);
+router.get('/', ensureLoggedIn, companiesCtrl.index);
 
 module.exports = router;

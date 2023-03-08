@@ -5,6 +5,6 @@ export async function createCompany(companyData) {
     return sendRequest(`${BASE_URL}/create`, 'POST', companyData)
 }
 
-// export async function getNotes() {
-//     return sendRequest(BASE_URL)
-// }
+export async function getCompanies() {
+    return sendRequest(BASE_URL)
+}

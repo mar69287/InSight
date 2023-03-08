@@ -10,8 +10,6 @@ export default function CreateCompanyForm({ user, setCompanies }) {
 
   const handleAddCompany = async (evt) => {
     evt.preventDefault();
-    // console.log(user._id);
-    // console.log(user)
     try {
       const company = await createCompany({
         name: newCompany.name,

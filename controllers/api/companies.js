@@ -1,8 +1,8 @@
 const Company = require('../../models/company')
 
 module.exports = {
-    create
-    // index
+    create,
+    index
 }
 
 async function create(req, res) {
@@ -13,16 +13,18 @@ async function create(req, res) {
         active: req.body.active,
     });
     try {
+        console.log(company)
         const savedCompany = await company.save();
         res.json(savedCompany);
     } catch (err) {
         res.status(400).json(err);
     }
-    console.log(req.body)
 }
 
-// async function index(req, res) {
-//     const userId = req.user._id;
-//     const notes = await Note.find({ user: userId });
-//     res.json(notes);
-// }
+async function index(req, res) {
+    const userId = req.user._id;
+    const companies = await Company.find({ user: userId });
+    // console.log(companies)
+
+    res.json(companies);
+}
