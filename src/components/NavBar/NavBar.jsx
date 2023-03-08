@@ -1,20 +1,38 @@
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import './NavBar.css';
 import * as userService from '../../utilities/users-service'
 
 export default function NavBar({ user, setUser }) {
 
-    function handleLogOut() {
-        userService.logOut()
-        setUser(null)
-    }
+    // function handleLogOut() {
+    //     userService.logOut()
+    //     setUser(null)
+    // }
+
+    // useEffect(() => {
+    //     let settingsIcon = document.querySelector('.settings-icon');
+    //     let navUl = document.querySelector('.nav-ul');
+
+    //     settingsIcon.addEventListener('click', () => {
+    //         navUl.classList.toggle('active');
+    //     });
+
+    //     let navLinks = document.querySelectorAll('.nav-ul li a');
+    //     navLinks.forEach(link => {
+    //         link.addEventListener('click', () => {
+    //             navUl.classList.remove('active');
+    //         });
+    //     });
+    // }, []);
 
     return (
-        <nav>
-            <Link to="/orders">Order History</Link>
-            &nbsp; | &nbsp;
-            <Link to="/orders/new">New Order</Link>
-            &nbsp;&nbsp; Welcome, {user.name}
-            &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
+        <nav className='dash-nav'>
+            <div>
+                <p>Welcome! {user.name}</p>
+                <a className="settings-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </a>
+            </div>
         </nav>
     )
 }

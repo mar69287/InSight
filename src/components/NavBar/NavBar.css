@@ -1,0 +1,25 @@
+.dash-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .6rem .5rem;
+    background-color: rgb(53, 62, 72);
+    height: 70px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 15rem;
+}
+
+.dash-nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash-nav p,
+.dash-nav i {
+    color: rgb(204, 207, 209);
+    font-size: 1.2rem;
+    padding: 0 .5rem;
+}
