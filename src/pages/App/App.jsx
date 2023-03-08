@@ -10,6 +10,7 @@ import HomeNav from '../../components/HomeNav/HomeNav';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar'
+import SideMenu from '../../components/SideMenu/SideMenu'
 
 export default function App() {
   const [user, setUser] = useState(getUser())
@@ -20,6 +21,7 @@ export default function App() {
         user ?
           <>
             <NavBar user={user} setUser={setUser} />
+            <SideMenu />
             <Routes>
               <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/*" element={<Navigate to="/dashboard" />} />

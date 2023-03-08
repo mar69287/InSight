@@ -1,0 +1,80 @@
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 90px 1.5rem 1.5rem 1.5rem;
+    background-color: rgb(46, 56, 64);
+    width: 15rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15rem;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo p {
+    color: white;
+    font-family: cursive;
+    font-size: 2rem;
+    margin: 0;
+    text-decoration: none;
+}
+
+.menu-links {
+    text-decoration: none;
+    color: rgb(125, 138, 153);
+    font-size: 1.1rem;
+    transition: color .3s;
+    width: 100%;
+    display: block;
+    padding: .5rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: .1rem;
+}
+
+.menu-links div {
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.menu-links i {
+    font-size: 1.1rem;
+}
+
+.menu-links:hover {
+    color: rgb(246, 67, 67);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 0;
+}
+
+li {
+    width: 100%;
+}
+
+.label {
+    color: rgb(125, 138, 153);
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
