@@ -23,3 +23,12 @@
     font-size: 1.2rem;
     padding: 0 .5rem;
 }
+
+.dash-nav i {
+    cursor: pointer;
+    transition: color .4s;
+}
+
+.dash-nav i:hover {
+    color: rgb(246, 67, 67);
+}

@@ -1,0 +1,26 @@
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem .5rem;
+    background-color: rgb(46, 56, 64);
+    width: 10rem;
+    position: fixed;
+    top: 70px;
+    right: 0;
+}
+
+.settings a {
+    color: rgb(204, 207, 209);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color .3s;
+    width: 100%;
+    text-align: center;
+    padding: .3rem 0;
+}
+
+.settings a:hover {
+    color: rgb(246, 67, 67);
+}

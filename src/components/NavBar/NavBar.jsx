@@ -1,38 +1,25 @@
-import { useEffect } from 'react'
+import { useState } from 'react'
 import './NavBar.css';
-import * as userService from '../../utilities/users-service'
+import Settings from '../../components/Settings/Settings';
 
 export default function NavBar({ user, setUser }) {
 
-    // function handleLogOut() {
-    //     userService.logOut()
-    //     setUser(null)
-    // }
+    const [showSettings, setShowSettings] = useState(false);
 
-    // useEffect(() => {
-    //     let settingsIcon = document.querySelector('.settings-icon');
-    //     let navUl = document.querySelector('.nav-ul');
+    const handleClick = () => {
+        setShowSettings(!showSettings);
+    };
 
-    //     settingsIcon.addEventListener('click', () => {
-    //         navUl.classList.toggle('active');
-    //     });
-
-    //     let navLinks = document.querySelectorAll('.nav-ul li a');
-    //     navLinks.forEach(link => {
-    //         link.addEventListener('click', () => {
-    //             navUl.classList.remove('active');
-    //         });
-    //     });
-    // }, []);
 
     return (
         <nav className='dash-nav'>
             <div>
                 <p>Welcome! {user.name}</p>
-                <a className="settings-icon">
-                    <i class="fa-solid fa-gear"></i>
+                <a className="settings-icon" onClick={handleClick}>
+                    <i className="fa-solid fa-gear"></i>
                 </a>
             </div>
+            {showSettings && <Settings />}
         </nav>
     )
 }

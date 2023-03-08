@@ -12,7 +12,7 @@
     left: 0;
 }
 
-.logo {
+.side-menu .logo {
     position: absolute;
     top: 0;
     left: 0;
@@ -23,7 +23,7 @@
     align-items: center;
 }
 
-.logo p {
+.side-menu .logo p {
     color: white;
     font-family: cursive;
     font-size: 2rem;

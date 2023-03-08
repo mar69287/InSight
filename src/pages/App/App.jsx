@@ -24,6 +24,8 @@ export default function App() {
             <SideMenu />
             <Routes>
               <Route path="/dashboard" element={<DashboardPage />} />
+              {/* <Route path="/companies" element={<CompaniesPage />} />
+              <Route path="/companies/create" element={<DashboardPage />} /> */}
               <Route path="/*" element={<Navigate to="/dashboard" />} />
             </Routes>
           </>
