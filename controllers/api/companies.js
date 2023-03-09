@@ -5,7 +5,8 @@ module.exports = {
     index,
     show,
     edit,
-    deleteCompany
+    deleteCompany,
+    createEmployee
 }
 
 async function create(req, res) {
@@ -70,4 +71,28 @@ async function deleteCompany(req, res) {
         console.error(err);
         res.status(500).json({ error: "Server error" });
     }
+}
+
+async function createEmployee(req, res) {
+    try {
+        const id = req.params.id;
+        const update = {
+            employees: {
+                name: req.body.name,
+                email: req.body.email,
+                position: req.body.position,
+            }
+        };
+
+        const updatedCompany = await Company.findByIdAndUpdate(
+            id,
+            { $push: update },
+            { new: true }
+        );
+
+        res.json(updatedCompany);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+    // console.log(req.body)
 }

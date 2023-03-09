@@ -11,6 +11,7 @@ import CompaniesPage from '../CompaniesPage/CompaniesPage';
 import CreateCompanyPage from '../CreateCompanyPage/CreateCompanyPage';
 import CompanyDetailPage from '../CompanyDetailPage/CompanyDetailPage';
 import UpdateCompanyPage from '../UpdateCompanyPage/UpdateCompanyPage';
+import AddEmployeePage from '../AddEmployeePage/AddEmployeePage';
 import HomeNav from '../../components/HomeNav/HomeNav';
 // import NewOrderPage from '../NewOrderPage/NewOrderPage';
 // import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
@@ -33,6 +34,7 @@ export default function App() {
               <Route path="/companies/create" element={<CreateCompanyPage user={user} />} />
               <Route path="/companies/:companyId" element={<CompanyDetailPage />} />
               <Route path="/companies/:companyId/edit" element={<UpdateCompanyPage />} />
+              <Route path="/companies/:companyId/employee" element={<AddEmployeePage />} />
               <Route path="/*" element={<Navigate to="/dashboard" />} />
             </Routes>
           </>

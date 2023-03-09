@@ -21,3 +21,10 @@ export async function updateCompany(id, updatedData) {
 export async function deleteCompany(id) {
     return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
 }
+
+export async function createEmployee(companyId, employeeData) {
+    return sendRequest(`${BASE_URL}/${companyId}/employee`, 'POST', employeeData)
+    // console.log('create employee api')
+    // console.log(companyId)
+    // console.log(employeeData)
+}

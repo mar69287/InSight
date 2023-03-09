@@ -1,0 +1,12 @@
+.add-title {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+.add-employee {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

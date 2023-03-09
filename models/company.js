@@ -10,14 +10,6 @@ const employeeSchema = new Schema({
         type: String,
         required: true
     },
-    hireDate: {
-        type: Date,
-        required: true,
-    },
-    email: {
-        type: String,
-        required: true,
-    },
     position: String
 }, {
     timestamps: true,
