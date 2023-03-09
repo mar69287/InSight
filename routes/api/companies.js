@@ -9,5 +9,6 @@ router.get('/:id', ensureLoggedIn, companiesCtrl.show);
 router.put('/:id', ensureLoggedIn, companiesCtrl.edit);
 router.delete('/:id', ensureLoggedIn, companiesCtrl.deleteCompany)
 router.post('/:id/employee', ensureLoggedIn, companiesCtrl.createEmployee)
+router.get('/:id/employees/:eId', ensureLoggedIn, companiesCtrl.getEmployee);
 
 module.exports = router;

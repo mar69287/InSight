@@ -3,9 +3,9 @@ import { updateEmployee } from '../../utilities/companies-api'
 
 export default function EditEmployeeForm({ companyId, employee, setEmployee }) {
   const [editEmployee, setEditEmployee] = useState({
-    name: employee?.name,
-    email: employee?.email,
-    position: employee?.position,
+    name: employee.name,
+    email: employee.email,
+    position: employee.position,
   })
 
   const handleEditEmployee = async (evt) => {

@@ -29,9 +29,11 @@ export async function createEmployee(companyId, employeeData) {
     // console.log(employeeData)
 }
 
-export async function getEmployee(id) {
-    // return sendRequest(`${BASE_URL}/emplyee/${id}`)
-    console.log("get employee api")
+export async function getEmployee(companyId, employeeId) {
+    // console.log(`company: ${companyId}`)
+    // console.log(`employee: ${employeeId}`)
+    return sendRequest(`${BASE_URL}/${companyId}/employees/${employeeId}`)
+    // console.log("get employee api")
 }
 
 export async function deleteEmployee(companyId) {

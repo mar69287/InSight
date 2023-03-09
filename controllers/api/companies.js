@@ -6,7 +6,8 @@ module.exports = {
     show,
     edit,
     deleteCompany,
-    createEmployee
+    createEmployee,
+    getEmployee
 }
 
 async function create(req, res) {
@@ -95,4 +96,18 @@ async function createEmployee(req, res) {
         res.status(400).json(err);
     }
     // console.log(req.body)
+}
+
+async function getEmployee(req, res) {
+    try {
+        const companyId = req.params.id;
+        const employeeId = req.params.eId;
+
+        const company = await Company.findById(companyId);
+        const employee = company.employees.id(employeeId);
+
+        res.json(employee);
+    } catch (err) {
+        res.status(400).json(err);
+    }
 }

@@ -10,7 +10,7 @@ export default function EditEmployeePage() {
 
     useEffect(() => {
         async function getEmployeeById() {
-            const employee = await getEmployee(employeeId);
+            const employee = await getEmployee(companyId, employeeId);
             setEmployee(employee);
             // console.log(company)
         }
@@ -19,10 +19,15 @@ export default function EditEmployeePage() {
 
     return (
         <section className='dashboard-home'>
-            <div className="add-employee">
-                <h1 className='add-title'>Edit Employee</h1>
-                <EditEmployeeForm companyId={companyId} employee={employee} setEmployee={setEmployee} />
-            </div>
+            {employee ? (
+                <div className="add-employee">
+                    <h1 className='add-title'>Edit Employee</h1>
+                    <EditEmployeeForm companyId={companyId} employee={employee} setEmployee={setEmployee} />
+                </div>
+            ) : (
+                <p>Loading...</p>
+            )}
+
         </section>
     )
 }
