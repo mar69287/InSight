@@ -4,7 +4,8 @@ module.exports = {
     create,
     index,
     show,
-    edit
+    edit,
+    deleteCompany
 }
 
 async function create(req, res) {
@@ -55,5 +56,18 @@ async function edit(req, res) {
         res.json(updatedCompany);
     } catch (err) {
         res.status(400).json(err);
+    }
+}
+
+async function deleteCompany(req, res) {
+    try {
+        const deletedCompany = await Company.findByIdAndDelete(req.params.id);
+        if (!deletedCompany) {
+            return res.status(404).json({ error: "Company not found" });
+        }
+        res.json({ message: "Company deleted successfully" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Server error" });
     }
 }

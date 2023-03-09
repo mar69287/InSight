@@ -17,3 +17,7 @@ export async function updateCompany(id, updatedData) {
     // console.log('editingggg')
     return sendRequest(`${BASE_URL}/${id}`, 'PUT', updatedData)
 }
+
+export async function deleteCompany(id) {
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
+}

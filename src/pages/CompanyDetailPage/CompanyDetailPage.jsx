@@ -1,13 +1,14 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { getCompany } from '../../utilities/companies-api'
+import { deleteCompany, getCompany } from '../../utilities/companies-api'
 import EmployeeTable from '../../components/EmployeeTable/EmployeeTable';
 import './CompanyDetailPage.css';
 
 export default function CompanyDetailPage() {
     const { companyId } = useParams();
     const [company, setCompany] = useState(null);
+    const navigate = useNavigate()
 
     useEffect(() => {
         async function getCompanyById() {
@@ -17,11 +18,17 @@ export default function CompanyDetailPage() {
         getCompanyById();
     }, []);
 
+    async function handleDelete() {
+        await deleteCompany(company._id);
+        navigate('/companies')
+    }
+
     return (
         <section className='dashboard-home'>
             <div className="company-detail">
                 {company ? (
                     <>
+                        <button onClick={handleDelete}>Delete</button>
                         <Link to={`/companies/${company._id}/edit`}>Edit</Link>
                         <h1>{company.name}</h1>
                         <div className="money">

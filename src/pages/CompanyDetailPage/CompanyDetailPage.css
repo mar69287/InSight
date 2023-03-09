@@ -58,3 +58,16 @@
 .company-detail a:hover {
     opacity: .8;
 }
+
+.company-detail button {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(246, 67, 67);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: .6rem .9rem;
+    position: absolute;
+    top: 2rem;
+    right: 7rem;
+    transition: all .3s;
+}
