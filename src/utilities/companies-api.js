@@ -28,3 +28,8 @@ export async function createEmployee(companyId, employeeData) {
     // console.log(companyId)
     // console.log(employeeData)
 }
+
+export async function deleteEmployee(companyId) {
+    // return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
+    console.log('delete api')
+}
