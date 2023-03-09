@@ -10,5 +10,6 @@ router.put('/:id', ensureLoggedIn, companiesCtrl.edit);
 router.delete('/:id', ensureLoggedIn, companiesCtrl.deleteCompany)
 router.post('/:id/employee', ensureLoggedIn, companiesCtrl.createEmployee)
 router.get('/:id/employees/:eId', ensureLoggedIn, companiesCtrl.getEmployee);
+router.put('/:id/employees/:eId', ensureLoggedIn, companiesCtrl.editEmployee);
 
 module.exports = router;

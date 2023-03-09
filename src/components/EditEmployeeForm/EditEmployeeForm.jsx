@@ -16,6 +16,7 @@ export default function EditEmployeeForm({ companyId, employee, setEmployee }) {
         email: editEmployee.email,
         position: editEmployee.position,
       });
+      console.log(updatedEmployee)
       setEmployee(updatedEmployee);
     } catch (err) {
       console.log(err);

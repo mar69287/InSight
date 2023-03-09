@@ -41,7 +41,6 @@ export async function deleteEmployee(companyId) {
     console.log('delete api')
 }
 
-export async function updateEmployee(id, updatedData) {
-    console.log('editingggg employee')
-    // return sendRequest(`${BASE_URL}/${id}`, 'PUT', updatedData)
+export async function updateEmployee(companyId, employeeId, updatedData) {
+    return sendRequest(`${BASE_URL}/${companyId}/employees/${employeeId}`, 'PUT', updatedData)
 }
