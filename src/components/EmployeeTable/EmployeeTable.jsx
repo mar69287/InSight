@@ -11,7 +11,7 @@ export default function EmployeeTable({ company, handleEmployeeDelete }) {
 
   return (
     <div className="employee-container">
-      <Link to={`/companies/${company._id}/employee`} ><i class="fa-solid fa-ellipsis"></i></Link>
+      <Link to={`/companies/${company._id}/employee`} ><i className="fa-solid fa-ellipsis"></i></Link>
       <table>
         <thead>
           <tr>

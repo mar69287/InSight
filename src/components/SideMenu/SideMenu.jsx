@@ -9,10 +9,10 @@ export default function SideMenu() {
                 <p>InSight</p>
             </div>
             <ul>
-                <li><Link to="/dashboard" className="menu-links"><div><i class="fa-solid fa-sitemap"></i></div>Dashboard</Link></li>
+                <li><Link to="/dashboard" className="menu-links"><div><i className="fa-solid fa-sitemap"></i></div>Dashboard</Link></li>
                 <li className='label'>Companies</li>
-                <li><Link to="/companies/create" className="menu-links"><div><i class="fa-solid fa-plus"></i></div>Add</Link></li>
-                <li><Link to="/companies" className="menu-links"><div><i class="fa-solid fa-city"></i></div>View All</Link></li>
+                <li><Link to="/companies/create" className="menu-links"><div><i className="fa-solid fa-plus"></i></div>Add</Link></li>
+                <li><Link to="/companies" className="menu-links"><div><i className="fa-solid fa-city"></i></div>View All</Link></li>
                 <li className='label'>Apps</li>
             </ul>
         </nav >
