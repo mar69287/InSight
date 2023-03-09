@@ -29,7 +29,17 @@ export async function createEmployee(companyId, employeeData) {
     // console.log(employeeData)
 }
 
+export async function getEmployee(id) {
+    // return sendRequest(`${BASE_URL}/emplyee/${id}`)
+    console.log("get employee api")
+}
+
 export async function deleteEmployee(companyId) {
     // return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
     console.log('delete api')
+}
+
+export async function updateEmployee(id, updatedData) {
+    console.log('editingggg employee')
+    // return sendRequest(`${BASE_URL}/${id}`, 'PUT', updatedData)
 }

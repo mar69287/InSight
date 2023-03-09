@@ -12,7 +12,7 @@ export default function UpdateCompanyPage({ user }) {
         async function getCompanyById() {
             const company = await getCompany(companyId);
             setCompany(company);
-            console.log(company)
+            // console.log(company)
         }
         getCompanyById();
     }, []);
