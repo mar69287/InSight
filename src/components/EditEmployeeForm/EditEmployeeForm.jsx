@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { updateEmployee } from '../../utilities/companies-api'
 
 export default function EditEmployeeForm({ companyId, employee, setEmployee }) {
@@ -7,6 +8,7 @@ export default function EditEmployeeForm({ companyId, employee, setEmployee }) {
     email: employee.email,
     position: employee.position,
   })
+  const navigate = useNavigate()
 
   const handleEditEmployee = async (evt) => {
     evt.preventDefault();
@@ -16,8 +18,8 @@ export default function EditEmployeeForm({ companyId, employee, setEmployee }) {
         email: editEmployee.email,
         position: editEmployee.position,
       });
-      console.log(updatedEmployee)
       setEmployee(updatedEmployee);
+      navigate(`/companies/${companyId}`)
     } catch (err) {
       console.log(err);
     }

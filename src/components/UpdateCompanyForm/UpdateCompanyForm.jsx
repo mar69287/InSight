@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { updateCompany } from '../../utilities/companies-api'
 
 export default function CreateCompanyForm({ user, company, setCompany }) {
@@ -7,6 +8,7 @@ export default function CreateCompanyForm({ user, company, setCompany }) {
     revenue: company.revenue,
     active: company.active,
   })
+  const navigate = useNavigate()
 
   const handleUpdateCompany = async (evt) => {
     evt.preventDefault();
@@ -17,6 +19,7 @@ export default function CreateCompanyForm({ user, company, setCompany }) {
         active: newCompany.active,
       });
       setCompany(updatedCompany);
+      navigate(`/companies/${company._id}`)
     } catch (err) {
       console.log(err);
     }
