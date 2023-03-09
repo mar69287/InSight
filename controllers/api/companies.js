@@ -8,7 +8,8 @@ module.exports = {
     deleteCompany,
     createEmployee,
     getEmployee,
-    editEmployee
+    editEmployee,
+    deleteEmployee
 }
 
 async function create(req, res) {
@@ -136,5 +137,27 @@ async function editEmployee(req, res) {
         res.json(employee);
     } catch (err) {
         res.status(400).json(err);
+    }
+}
+
+async function deleteEmployee(req, res) {
+    try {
+        const companyId = req.params.id;
+        const employeeId = req.params.eId;
+
+        const company = await Company.findById(companyId);
+        const employee = company.employees.id(employeeId);
+
+        if (!employee) {
+            return res.status(404).json({ error: "Employee not found" });
+        }
+
+        employee.remove();
+        await company.save();
+
+        res.json({ message: "Employee deleted successfully" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Server error" });
     }
 }

@@ -23,6 +23,11 @@ export default function CompanyDetailPage() {
         navigate('/companies')
     }
 
+    async function handleEmployeeDelete() {
+        const updatedCompany = await getCompany(companyId);
+        setCompany(updatedCompany);
+    }
+
     return (
         <section className='dashboard-home'>
             <div className="company-detail">
@@ -53,7 +58,7 @@ export default function CompanyDetailPage() {
                                 <p>Inventory</p>
                             </div>
                         </div>
-                        <EmployeeTable company={company} />
+                        <EmployeeTable company={company} handleEmployeeDelete={handleEmployeeDelete} />
 
                     </>
                 ) : (

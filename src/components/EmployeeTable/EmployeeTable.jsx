@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom'
 import { deleteEmployee } from '../../utilities/companies-api'
 import './EmployeeTable.css';
 
-export default function EmployeeTable({ company }) {
+export default function EmployeeTable({ company, handleEmployeeDelete }) {
 
-  async function handleDelete() {
-    await deleteEmployee(company._id);
+  async function handleDelete(employeeId) {
+    await deleteEmployee(company._id, employeeId);
+    handleEmployeeDelete();
   }
 
   return (
@@ -28,7 +29,7 @@ export default function EmployeeTable({ company }) {
               <td>{employee.email}</td>
               <td>{employee.position}</td>
               <td><Link to={`/companies/${company._id}/employee/${employee._id}/edit`}>Edit</Link></td>
-              <td><button onClick={handleDelete}>Delete</button></td>
+              <td><button onClick={() => handleDelete(employee._id)}>Delete</button></td>
             </tr>
           ))}
         </tbody>
