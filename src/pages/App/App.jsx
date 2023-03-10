@@ -29,7 +29,7 @@ export default function App() {
             <SideMenu />
             <Routes>
               <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/calendar" element={<CalendarPage />} />
+              <Route path="/calendar" element={<CalendarPage user={user} />} />
               <Route path="/companies" element={<CompaniesPage />} />
               <Route path="/companies/create" element={<CreateCompanyPage user={user} />} />
               <Route path="/companies/:companyId" element={<CompanyDetailPage />} />

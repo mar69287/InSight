@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { deleteCompany, getCompany } from '../../utilities/companies-api'
+import { deleteCompany, getCompany, deleteEvent } from '../../utilities/companies-api'
 import EmployeeTable from '../../components/EmployeeTable/EmployeeTable';
 import './CompanyDetailPage.css';
 

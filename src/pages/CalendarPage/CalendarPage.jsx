@@ -1,15 +1,33 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import FullCalendar, { formatDate } from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
+import { createEvent, getEvents, deleteEvent } from '../../utilities/events-api'
 import './CalendarPage.css';
 
-export default function CalendarPage() {
+export default function CalendarPage({ user }) {
     const [currentEvents, setCurrentEvents] = useState([]);
+    const calendarRef = useRef();
 
-    const handleDateClick = (selected) => {
+    useEffect(() => {
+        async function getAllEvents() {
+            const events = await getEvents();
+            setCurrentEvents(events);
+            events.forEach(event => {
+                calendarApi.addEvent({ // <-- add this line
+                    title: event.title,
+                    start: event.start,
+                    end: event.end
+                });
+            });
+        }
+        const calendarApi = calendarRef.current.getApi(); // <-- add this line
+        getAllEvents();
+    }, []);
+
+    const handleDateClick = async (selected) => {
         const title = prompt("Please enter a new title for your event");
         const calendarApi = selected.view.calendar;
         calendarApi.unselect();
@@ -20,18 +38,42 @@ export default function CalendarPage() {
                 start: selected.startStr,
                 end: selected.endStr,
             });
+            try {
+
+                const event = await createEvent({
+                    title,
+                    start: selected.startStr,
+                    end: selected.endStr,
+                    user: user._id
+                })
+                setCurrentEvents(updatedEvents => [...updatedEvents, event])
+            } catch (error) {
+                console.error(error);
+            }
         }
     };
 
-    const handleEventClick = (selected) => {
+
+    const handleEventClick = async (selected) => {
+        console.log(selected.event)
         if (
             window.confirm(
                 `Are you sure you want to delete the event '${selected.event.title}'`
             )
         ) {
             selected.event.remove();
+
         }
     };
+
+    const handleDeleteEvent = async (eventId) => {
+        if (window.confirm(`Are you sure you want to delete the event?`)) {
+
+            await deleteEvent(eventId);
+            setCurrentEvents(currentEvents.filter(event => event._id !== eventId));
+
+        }
+    }
 
     return (
         <section className='dashboard-home'>
@@ -42,7 +84,7 @@ export default function CalendarPage() {
                     <h1>Events</h1>
                     <ul>
                         {currentEvents.map((event) => (
-                            <li key={event.id} >
+                            <li key={event.id} onClick={() => handleDeleteEvent(event._id, event.title)}>
                                 <div>
                                     <div>{event.title}</div>
                                     <div> When:&nbsp;
@@ -71,7 +113,7 @@ export default function CalendarPage() {
                         headerToolbar={{
                             left: "prev,next today",
                             center: "title",
-                            right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+                            right: "dayGridMonth,timeGridWeek,timeGridDay",
                         }}
                         initialView="dayGridMonth"
                         editable={true}
@@ -80,11 +122,10 @@ export default function CalendarPage() {
                         dayMaxEvents={true}
                         select={handleDateClick}
                         eventClick={handleEventClick}
-                        eventsSet={(events) => setCurrentEvents(events)}
-
+                        ref={calendarRef} // <-- add this line
+                    // displayEventTime: false
                     />
                 </div>
-                {/* </div> */}
             </div>
 
         </section >
