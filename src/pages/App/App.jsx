@@ -2,7 +2,6 @@ import './App.css';
 import { useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { getUser } from '../../utilities/users-service'
-// import { getCompany } from '../../utilities/companies-api'
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import HomePage from '../HomePage/HomePage';
@@ -15,8 +14,6 @@ import AddEmployeePage from '../AddEmployeePage/AddEmployeePage';
 import EditEmployeePage from '../EditEmployeePage/EditEmployeePage';
 import CalendarPage from '../CalendarPage/CalendarPage';
 import HomeNav from '../../components/HomeNav/HomeNav';
-// import NewOrderPage from '../NewOrderPage/NewOrderPage';
-// import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar'
 import SideMenu from '../../components/SideMenu/SideMenu'
 

@@ -1,52 +1,31 @@
-.dashboard-home {
-    min-height: calc(100vh - 70px);
-    margin-left: 15rem;
-    width: calc(100vw - 15rem);
+.calendar-container {
+    width: 90%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(43, 52, 59);
-    /* padding: 2rem; */
-}
-
-p,
-h1,
-h2,
-a {
-    color: rgb(125, 138, 153)
-}
-
-.dash-container {
-    width: 100%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.dash-container div {
-    margin-bottom: 1rem;
-}
-
-.graph-container {
-    height: 30rem;
-    width: 35rem;
-    background-color: rgb(47, 56, 65);
+    justify-content: space-between;
     padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    margin: 0 1.5rem;
 }
 
-.graph-container h1 {
-    margin: 0;
-    margin-top: 1rem;
+.events-container {
+    flex: 1 1 30%;
+    background-color: rgb(0, 170, 170);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.events-container>h1 {
+    color: black;
     text-align: center;
 }
 
-.graphs {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.events-container li {
+    padding: .7rem;
+    margin: .4rem 0;
+    border-radius: .3rem;
+    background-color: rgb(208, 118, 238);
+}
+
+.calendar {
+    flex: 1 1 100%;
+    margin-left: 1rem;
 }
