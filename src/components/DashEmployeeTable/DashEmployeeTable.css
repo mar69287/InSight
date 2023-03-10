@@ -1,0 +1,4 @@
+.dash-container>div:last-child .employee-container {
+    height: 100%;
+    flex: 1 1 100%;
+}

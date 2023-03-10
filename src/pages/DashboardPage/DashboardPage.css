@@ -26,7 +26,8 @@ a {
     align-items: center;
 }
 
-.dash-container div {
+.dash-container div,
+.dash-container section {
     margin-bottom: 1rem;
 }
 
@@ -42,6 +43,7 @@ a {
 .graph-container h1 {
     margin: 0;
     margin-top: 1rem;
+    font-size: 1.8rem;
     text-align: center;
 }
 
@@ -49,4 +51,10 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.dash-container>div:last-child {
+    height: 20rem;
+    width: 100%;
+    display: flex;
 }

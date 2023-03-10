@@ -9,6 +9,7 @@
     top: 0;
     right: 0;
     left: 15rem;
+    z-index: 5;
 }
 
 .dash-nav div {

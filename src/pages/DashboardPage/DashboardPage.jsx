@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import SalesBarChart from '../../components/SalesBarChart/SalesBarChart'
 import RevenueBarChart from '../../components/RevenueBarChart/RevenueBarChart'
+import DashEmployeeTable from '../../components/DashEmployeeTable/DashEmployeeTable'
 import { getCompanies } from '../../utilities/companies-api'
 import './DashboardPage.css';
 
@@ -12,6 +13,7 @@ export default function DashboardPage() {
     const [totalRevenue, setTotalRevenue] = useState(0);
     const [totalOrders, setTotalOrders] = useState(0);
     const [totalInventory, setTotalInventory] = useState(0);
+    const [allEmployees, setAllEmployees] = useState([]);
 
     useEffect(() => {
         async function getAllCompanies() {
@@ -23,6 +25,7 @@ export default function DashboardPage() {
             let totalRevenue = 0;
             let totalOrders = 0;
             let totalInventory = 0;
+            let allEmployees = []
 
             for (const company of companies) {
                 totalEmployees += company.employees.length;
@@ -30,6 +33,10 @@ export default function DashboardPage() {
                 totalRevenue += company.revenue || 0;
                 totalOrders += company.orders || 0;
                 totalInventory += company.inventory || 0;
+                allEmployees.push(...company.employees.map((employee) => ({
+                    ...employee,
+                    companyName: company.name
+                })));
             }
 
             setTotalEmployees(totalEmployees);
@@ -37,6 +44,7 @@ export default function DashboardPage() {
             setTotalRevenue(totalRevenue);
             setTotalOrders(totalOrders);
             setTotalInventory(totalInventory);
+            setAllEmployees(allEmployees);
         }
 
         getAllCompanies();
@@ -83,6 +91,9 @@ export default function DashboardPage() {
                         <SalesBarChart />
                     </div>
                 </section>
+                <div>
+                    <DashEmployeeTable employees={allEmployees} />
+                </div>
             </div>
         </section>
     )
