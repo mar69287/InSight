@@ -15,6 +15,7 @@ export async function getCompany(id) {
 
 export async function updateCompany(id, updatedData) {
     // console.log('editingggg')
+    console.log(updatedData)
     return sendRequest(`${BASE_URL}/${id}`, 'PUT', updatedData)
 }
 

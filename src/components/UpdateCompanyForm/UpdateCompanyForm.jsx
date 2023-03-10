@@ -6,6 +6,9 @@ export default function CreateCompanyForm({ user, company, setCompany }) {
   const [newCompany, setNewCompany] = useState({
     name: company.name,
     revenue: company.revenue,
+    sales: company.sales,
+    orders: company.orders,
+    inventory: company.inventory,
     active: company.active,
   })
   const navigate = useNavigate()
@@ -16,6 +19,9 @@ export default function CreateCompanyForm({ user, company, setCompany }) {
       const updatedCompany = await updateCompany(company._id, {
         name: newCompany.name,
         revenue: newCompany.revenue,
+        sales: newCompany.sales,
+        orders: newCompany.orders,
+        inventory: newCompany.inventory,
         active: newCompany.active,
       });
       setCompany(updatedCompany);
@@ -44,8 +50,14 @@ export default function CreateCompanyForm({ user, company, setCompany }) {
         <form autoComplete="off" onSubmit={handleUpdateCompany}>
           <label>Company Name</label>
           <input type="text" name="name" value={newCompany.name} onChange={handleChange} required />
-          <label>Revenue</label>
+          <label>Total Revenue</label>
           <input type="number" name="revenue" value={newCompany.revenue} onChange={handleChange} required />
+          <label>Total Sales</label>
+          <input type="number" name="sales" value={newCompany.sales} onChange={handleChange} required />
+          <label>Total Inventory</label>
+          <input type="number" name="inventory" value={newCompany.inventory} onChange={handleChange} required />
+          <label>Total Orders</label>
+          <input type="number" name="orders" value={newCompany.orders} onChange={handleChange} required />
           <label>Active</label>
           <input type="checkbox" name="active" checked={newCompany.active} onChange={handleCheckboxChange} />
           <button type="submit">UPDATE COMPANY</button>

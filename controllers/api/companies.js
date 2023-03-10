@@ -17,6 +17,9 @@ async function create(req, res) {
         name: req.body.name,
         user: req.body.user,
         revenue: req.body.revenue,
+        sales: req.body.sales,
+        orders: req.body.orders,
+        inventory: req.body.inventory,
         active: req.body.active,
     });
     try {
@@ -48,6 +51,9 @@ async function edit(req, res) {
         const update = {
             name: req.body.name,
             revenue: req.body.revenue,
+            sales: req.body.sales,
+            orders: req.body.orders,
+            inventory: req.body.inventory,
             active: req.body.active,
         };
 

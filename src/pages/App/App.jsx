@@ -13,6 +13,7 @@ import CompanyDetailPage from '../CompanyDetailPage/CompanyDetailPage';
 import UpdateCompanyPage from '../UpdateCompanyPage/UpdateCompanyPage';
 import AddEmployeePage from '../AddEmployeePage/AddEmployeePage';
 import EditEmployeePage from '../EditEmployeePage/EditEmployeePage';
+import CalendarPage from '../CalendarPage/CalendarPage';
 import HomeNav from '../../components/HomeNav/HomeNav';
 // import NewOrderPage from '../NewOrderPage/NewOrderPage';
 // import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
@@ -31,6 +32,7 @@ export default function App() {
             <SideMenu />
             <Routes>
               <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/calendar" element={<CalendarPage />} />
               <Route path="/companies" element={<CompaniesPage />} />
               <Route path="/companies/create" element={<CreateCompanyPage user={user} />} />
               <Route path="/companies/:companyId" element={<CompanyDetailPage />} />

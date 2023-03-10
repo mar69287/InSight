@@ -29,6 +29,15 @@ const companySchema = new Schema({
     revenue: {
         type: Number
     },
+    sales: {
+        type: Number
+    },
+    orders: {
+        type: Number
+    },
+    inventory: {
+        type: Number
+    },
     active: {
         type: Boolean,
         required: true

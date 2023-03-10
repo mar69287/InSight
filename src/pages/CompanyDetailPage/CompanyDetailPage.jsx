@@ -42,11 +42,11 @@ export default function CompanyDetailPage() {
                                 <p>Status</p>
                             </div>
                             <div className="sales">
-                                <h1>{company.revenue}</h1>
+                                <h1>${company.sales}</h1>
                                 <p>Sales</p>
                             </div>
                             <div className="revenue">
-                                <h1>{company.revenue}</h1>
+                                <h1>${company.revenue}</h1>
                                 <p>Revenue</p>
                             </div>
                             <div className="orders">

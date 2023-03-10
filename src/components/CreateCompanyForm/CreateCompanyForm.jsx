@@ -6,6 +6,9 @@ export default function CreateCompanyForm({ user, setCompanies }) {
   const [newCompany, setNewCompany] = useState({
     name: '',
     revenue: 0,
+    sales: 0,
+    orders: 0,
+    inventory: 0,
     active: false,
   })
   const navigate = useNavigate()
@@ -16,13 +19,15 @@ export default function CreateCompanyForm({ user, setCompanies }) {
       const company = await createCompany({
         name: newCompany.name,
         user: user._id,
-        revenue: newCompany.revenue,
+        revenue: 0,
+        sales: 0,
+        orders: 0,
+        inventory: 0,
         active: newCompany.active,
       });
       setCompanies(prevCompanies => [...prevCompanies, company]);
       setNewCompany({
         name: '',
-        revenue: 0,
         active: false,
       });
       navigate('/companies')
@@ -50,8 +55,6 @@ export default function CreateCompanyForm({ user, setCompanies }) {
         <form autoComplete="off" onSubmit={handleAddCompany}>
           <label>Company Name</label>
           <input type="text" name="name" value={newCompany.name} onChange={handleChange} required />
-          <label>Revenue</label>
-          <input type="number" name="revenue" value={newCompany.revenue} onChange={handleChange} required />
           <label>Active</label>
           <input type="checkbox" name="active" checked={newCompany.active} onChange={handleCheckboxChange} />
           <button type="submit">CREATE COMPANY</button>
