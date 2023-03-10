@@ -6,17 +6,18 @@
     padding: 1.5rem;
 }
 
-.events-container {
+.calendar-container .events-container {
     flex: 1 1 30%;
-    background-color: rgb(0, 170, 170);
+    background-color: rgb(1, 70, 70);
     padding: 1rem;
     border-radius: 10px;
     height: 85vh;
+    /* height: 100%; */
     overflow: auto;
 }
 
-.events-container>h1 {
-    color: black;
+.calendar-container .events-container>h1 {
+
     text-align: center;
 }
 
@@ -24,7 +25,7 @@
     padding: .7rem;
     margin: .4rem 0;
     border-radius: .3rem;
-    background-color: rgb(208, 118, 238);
+    /* background-color: rgb(208, 118, 238); */
 }
 
 .calendar {

@@ -2,3 +2,7 @@
     height: 100%;
     flex: 1 1 100%;
 }
+
+.dash-container .employee-container {
+    margin: .75rem;
+}

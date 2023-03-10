@@ -1,38 +1,33 @@
-import { useState, useEffect, useRef } from 'react'
-import { createEvent, getEvents, deleteEvent } from '../../utilities/events-api'
-import './CalendarPage.css';
+import './Events.css';
 
-export default function CalendarPage({ user }) {
-    const [currentEvents, setCurrentEvents] = useState([]);
-
-    useEffect(() => {
-        async function getAllEvents() {
-            const events = await getEvents();
-            setCurrentEvents(events);
-        }
-        getAllEvents();
-    }, []);
-
+export default function Events({ events }) {
 
     return (
-
 
 
 
         <div className='events-container'>
             <h1>Events</h1>
             <ul>
-                {currentEvents.map((event) => (
-                    <li key={event.id} onClick={() => handleDeleteEvent(event._id, event.title)}>
+                {events.map((event) => (
+                    <li key={event.id}>
                         <div>
                             <div>{event.title}</div>
-                            <div> When:&nbsp;
+                            <div>Starts:&nbsp;
 
                                 {new Intl.DateTimeFormat("en-US", {
                                     year: "numeric",
                                     month: "short",
                                     day: "numeric",
                                 }).format(new Date(event.start))}
+                            </div>
+                            <div>Ends:&nbsp;
+
+                                {new Intl.DateTimeFormat("en-US", {
+                                    year: "numeric",
+                                    month: "short",
+                                    day: "numeric",
+                                }).format(new Date(event.end))}
                             </div>
                         </div>
                     </li>
