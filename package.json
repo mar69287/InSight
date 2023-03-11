@@ -11,6 +11,8 @@
     "@fullcalendar/timegrid": "^6.1.4",
     "@nivo/bar": "^0.80.0",
     "@nivo/core": "^0.80.0",
+    "@stripe/react-stripe-js": "^1.16.5",
+    "@stripe/stripe-js": "^1.48.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -24,7 +26,9 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
-    "serve-favicon": "^2.5.0"
+    "react-stripe-checkout": "^2.6.3",
+    "serve-favicon": "^2.5.0",
+    "stripe": "^11.14.0"
   },
   "scripts": {
     "start": "react-scripts start",

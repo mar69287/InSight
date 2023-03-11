@@ -20,6 +20,7 @@ app.use(require('./config/checkToken'))
 app.use('/api/users', require('./routes/api/users'))
 app.use('/api/companies', require('./routes/api/companies'))
 app.use('/api/events', require('./routes/api/events'))
+app.use('/api/payment', require('./routes/api/payment'))
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
 app.get('/*', function (req, res) {
