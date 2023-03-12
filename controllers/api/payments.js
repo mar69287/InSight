@@ -5,6 +5,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", null);
 
 module.exports = {
     create,
+    index
 
 }
 
@@ -55,4 +56,11 @@ async function create(req, res) {
     await payment.save();
 
     res.status(201).json({ success: true });
+}
+
+async function index(req, res) {
+    const userId = req.user._id;
+    const payments = await Payment.find({ user: userId });
+
+    res.json(payments);
 }

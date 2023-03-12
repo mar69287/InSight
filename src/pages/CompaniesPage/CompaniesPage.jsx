@@ -6,6 +6,7 @@ import './CompaniesPage.css';
 export default function CompaniesPage() {
     const [companies, setCompanies] = useState([]);
 
+
     useEffect(() => {
         async function getAllCompanies() {
             const companies = await getCompanies();
@@ -19,7 +20,7 @@ export default function CompaniesPage() {
 
             <div className="company-index">
                 {companies.map((company, idx) => (
-                    <Link to={`/companies/${company._id}`} >
+                    <Link to={`/companies/${company._id}`}>
                         <div className="company-container" key={idx}>
                             <h1>{company.name}</h1>
                             <div>

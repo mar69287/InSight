@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { createCompany } from '../../utilities/companies-api'
 import { useNavigate } from "react-router-dom";
 
-export default function CreateCompanyForm({ user, setCompanies }) {
+export default function CreateCompanyForm({ user }) {
   const [newCompany, setNewCompany] = useState({
     name: '',
     revenue: 0,
@@ -25,7 +25,6 @@ export default function CreateCompanyForm({ user, setCompanies }) {
         inventory: 0,
         active: newCompany.active,
       });
-      setCompanies(prevCompanies => [...prevCompanies, company]);
       setNewCompany({
         name: '',
         active: false,
