@@ -2,6 +2,8 @@ import './App.css';
 import { useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { getUser } from '../../utilities/users-service'
+import '@stripe/stripe-js'
+import CheckoutPage from '../CheckoutPage/CheckoutPage'
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import HomePage from '../HomePage/HomePage';
@@ -31,6 +33,7 @@ export default function App() {
             <Routes>
               <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/payment" element={<PaymentPage />} />
+              <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/calendar" element={<CalendarPage user={user} />} />
               <Route path="/companies" element={<CompaniesPage />} />
               <Route path="/companies/create" element={<CreateCompanyPage user={user} />} />

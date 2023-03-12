@@ -1,7 +1,7 @@
 import { useState } from "react";
 import StripeCheckout from "react-stripe-checkout";
 
-function PaymentPage() {
+export default function PaymentPage() {
     const [amount, setAmount] = useState(200);
     const handleToken = (token) => {
         fetch("api/payment/donate", {
@@ -33,6 +33,4 @@ function PaymentPage() {
         </div>
     );
 }
-
-export default PaymentPage;
 

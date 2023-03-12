@@ -6,6 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", null);
 
 router.post('/donate', async (req, res) => {
     const { token = {}, amount = 200 } = req.body;
+    console.log(token)
 
     if (!Object.keys(token).length || !amount) {
         res.status(400).json({ success: false });
