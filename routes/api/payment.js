@@ -4,9 +4,11 @@ require('dotenv').config();
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", null);
 
-router.post('/donate', async (req, res) => {
+router.post('/', async (req, res) => {
+    // console.log('in the route payment')
+    // console.log(req.body)
     const { token = {}, amount = 200 } = req.body;
-    console.log(token)
+    // console.log(token)
 
     if (!Object.keys(token).length || !amount) {
         res.status(400).json({ success: false });
@@ -26,7 +28,7 @@ router.post('/donate', async (req, res) => {
     }
 
     const invoiceId = `${token.email}-${Math.random().toString()}-${Date.now().toString()}`;
-
+    console.log('invoiceId: ', invoiceId)
     const charge = await stripe.charges.create({
         amount: amount * 100,
         currency: "USD",
