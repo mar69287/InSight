@@ -1,8 +1,21 @@
 .dash-container>div:last-child .employee-container {
     height: 100%;
     flex: 1 1 100%;
+    /* color: rgb(161, 183, 204); */
 }
 
 .dash-container .employee-container {
     margin: .75rem;
+}
+
+.employee-container h1 {
+    color: rgb(161, 183, 204);
+}
+
+.dash-container>div:last-child .employee-container>table th {
+    color: rgb(161, 183, 204);
+}
+
+.dash-container>div:last-child .employee-container>table td {
+    color: rgb(125, 138, 153);
 }

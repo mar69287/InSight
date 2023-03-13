@@ -10,7 +10,8 @@ p,
 h1,
 h2,
 a {
-    color: rgb(125, 138, 153)
+    /* color: rgb(125, 138, 153) */
+    /* color: rgb(161, 183, 204); */
 }
 
 .dash-container {
@@ -58,6 +59,7 @@ a {
     /* height: 35rem; */
     background-color: rgb(47, 56, 65);
     padding: 1.5rem;
+    border-radius: .5rem;
 }
 
 .graph-title {
@@ -72,7 +74,7 @@ a {
 
 .graph-title h1,
 .graph-title p {
-    color: rgb(255, 255, 255);
+    color: rgb(161, 183, 204);
     margin: 0;
 }
 

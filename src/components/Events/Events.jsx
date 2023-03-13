@@ -21,14 +21,14 @@ export default function Events({ events }) {
                                     day: "numeric",
                                 }).format(new Date(event.start))}
                             </div>
-                            <div>Ends:&nbsp;
+                            {/* <div>Ends:&nbsp;
 
                                 {new Intl.DateTimeFormat("en-US", {
                                     year: "numeric",
                                     month: "short",
                                     day: "numeric",
                                 }).format(new Date(event.end))}
-                            </div>
+                            </div> */}
                         </div>
                     </li>
                 ))}

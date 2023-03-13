@@ -29,7 +29,7 @@ export default function SalesBarChart() {
             data={data}
             keys={['Sales']}
             indexBy="id"
-            margin={{ top: 30, right: 50, bottom: 130, left: 70 }}
+            margin={{ top: 10, right: 50, bottom: 50, left: 70 }}
             padding={0.5}
             valueScale={{ type: 'linear' }}
             indexScale={{ type: 'band', round: true }}

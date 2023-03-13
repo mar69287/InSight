@@ -16,7 +16,7 @@
 .events-container h1 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: rgb(125, 138, 153);
+    color: rgb(161, 183, 204);
     text-align: left;
 }
 
@@ -25,6 +25,7 @@
     padding: 0;
     margin: 0;
     overflow: auto;
+    border: none;
 }
 
 
@@ -48,15 +49,16 @@
 
 .events-container li {
     margin-bottom: 0.5rem;
-    border-radius: 0.25rem;
-    background-color: white;
+    border-bottom: 1px solid;
+    border-radius: none;
+    border-color: rgb(125, 138, 153);
     padding: 0.5rem;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); */
 }
 
 .events-container li div:first-child {
     font-size: 1.25rem;
-    color: rgb(246, 67, 67);
+    color: rgb(127, 152, 181);
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
@@ -64,6 +66,6 @@
 .events-container li div:nth-child(2),
 .events-container li div:nth-child(3) {
     font-size: 1rem;
-    color: rgb(124, 191, 176);
+    color: rgb(125, 138, 153);
     margin: 0;
 }
