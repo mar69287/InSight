@@ -57,23 +57,27 @@ export default function DashboardPage() {
     }, []);
 
     return (
-        <section className='dashboard-home'>
+        <section className='content-container'>
             <div className="dash-container">
-                <div className="money">
-                    <div className="sales">
+                <div className="company-data">
+                    <div className="">
                         <h1>{companies.length}</h1>
                         <p>Companies</p>
                     </div>
-                    <div className="sales">
+                    <div className="">
                         <h1>{totalEmployees}</h1>
                         <p>Employees</p>
                     </div>
-                    <div className="orders">
+                    <div className="">
                         <h1>{totalOrders}</h1>
                         <p>Online Orders</p>
                     </div>
+                    <div className="">
+                        <h1>{totalInventory}</h1>
+                        <p>Inventory</p>
+                    </div>
                 </div>
-                <div className="money">
+                {/* <div className="money">
                     <div className="sales">
                         <h1>{`$${totalSales}`}</h1>
                         <p>Sales</p>
@@ -82,18 +86,30 @@ export default function DashboardPage() {
                         <h1>{`$${totalRevenue}`}</h1>
                         <p>Revenue</p>
                     </div>
-                    <div className="inventory">
-                        <h1>{totalInventory}</h1>
-                        <p>Inventory</p>
-                    </div>
-                </div>
+                </div> */}
                 <section className="graphs">
-                    <div className="graph-container">
+                    <div className="graph-title">
                         <h1>Revenue Report</h1>
+                        <div>
+                            <p>Total</p>
+                            <h1>{`$${totalRevenue}`}</h1>
+                        </div>
+                    </div>
+                    <div className="graph-container">
                         <RevenueBarChart />
                     </div>
-                    <div className="graph-container">
+
+                </section>
+                <section className="graphs">
+                    <div className="graph-title">
                         <h1>Sales Report</h1>
+                        <div>
+                            <p>Total</p>
+                            <h1>{`$${totalSales}`}</h1>
+                        </div>
+                    </div>
+
+                    <div className="graph-container">
                         <SalesBarChart />
                     </div>
                 </section>

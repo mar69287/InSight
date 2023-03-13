@@ -1,13 +1,9 @@
-.dashboard-home {
+.content-container {
     min-height: calc(100vh - 70px);
     margin-left: 15rem;
     width: calc(100vw - 15rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: rgb(43, 52, 59);
-    /* padding: 2rem; */
+    padding: 2rem;
 }
 
 p,
@@ -19,25 +15,81 @@ a {
 
 .dash-container {
     width: 100%;
-    padding: 2rem;
+    /* padding: 2rem; */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
-.dash-container div,
-.dash-container section {
-    margin-bottom: 1rem;
+.company-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.company-data>div {
+    width: 22%;
+
+    padding: 1.5rem;
+    background-color: rgb(99, 48, 238);
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.company-data h1,
+.company-data p {
+    color: rgb(255, 255, 255);
+}
+
+.dash-container>div,
+.dash-container>section {
+    margin-bottom: 2rem;
+}
+
+.graphs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    /* height: 35rem; */
+    background-color: rgb(47, 56, 65);
+    padding: 1.5rem;
+}
+
+.graph-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* padding: 1.5rem; */
+    /* height: 10%; */
+    padding: 0 2rem;
+}
+
+.graph-title h1,
+.graph-title p {
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.graph-title>h1 {
+    font-size: 1.5rem;
+}
+
+.graph-title p {
+    margin-bottom: .3rem;
 }
 
 .graph-container {
-    height: 30rem;
-    width: 35rem;
-    background-color: rgb(47, 56, 65);
+    height: 25rem;
+    width: 100%;
     padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    margin: 0 1.5rem;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); */
+    /* margin: 0 1.5rem; */
 }
 
 .graph-container h1 {
@@ -47,11 +99,7 @@ a {
     text-align: center;
 }
 
-.graphs {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
+
 
 .dash-container>div:last-child {
     height: 20rem;

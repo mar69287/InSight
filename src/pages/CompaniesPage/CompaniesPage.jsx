@@ -16,7 +16,7 @@ export default function CompaniesPage() {
     }, []);
 
     return (
-        <section className='dashboard-home'>
+        <section className='content-container'>
 
             <div className="company-index">
                 {companies.map((company, idx) => (
