@@ -16,25 +16,25 @@ export default function CompaniesPage() {
     }, []);
 
     return (
-        <section className='content-container'>
+        <section className='content-container company-index'>
 
-            <div className="company-index">
-                {companies.map((company, idx) => (
-                    <Link to={`/companies/${company._id}`}>
-                        <div className="company-container" key={idx}>
-                            <h1>{company.name}</h1>
+            {/* <div className="company-index"> */}
+            {companies.map((company, idx) => (
+                <Link to={`/companies/${company._id}`}>
+                    <div className="company-container" key={idx}>
+                        <h1>{company.name}</h1>
+                        <div>
                             <div>
-                                <div>
-                                    <p>Number of Employees:</p> <p>{company.employees.length}</p>
-                                </div>
-                                <div>
-                                    <p>Status:</p> <p>{company.active ? "Active" : "Not Active"}</p>
-                                </div>
+                                <p>Number of Employees:</p> <p>{company.employees.length}</p>
+                            </div>
+                            <div>
+                                <p>Status:</p> <p>{company.active ? "Active" : "Not Active"}</p>
                             </div>
                         </div>
-                    </Link>
-                ))}
-            </div>
+                    </div>
+                </Link>
+            ))}
+            {/* </div> */}
 
         </section>
     )
