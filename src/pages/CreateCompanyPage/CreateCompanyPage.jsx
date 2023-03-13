@@ -20,11 +20,11 @@ export default function CreateCompanyPage({ user }) {
     }, []);
 
     return (
-        <section className='dashboard-home'>
+        <section className='content-container create-container'>
             {companies.length === 1 && payments.length === 0 ? (
                 <PaymentButton setPayments={setPayments} />
             ) : <div className='add-company-container'>
-                <h1 className='add-title'>Add Company</h1>
+                {/* <h1 className='add-title'>Add Company</h1> */}
                 <CreateCompanyForm user={user} setCompanies={setCompanies} />
             </div>}
         </section>

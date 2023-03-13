@@ -51,6 +51,7 @@ export default function CreateCompanyForm({ user }) {
   return (
     <div>
       <div className="form-container">
+        <h1 className='add-title'>Add Company</h1>
         <form autoComplete="off" onSubmit={handleAddCompany}>
           <label>Company Name</label>
           <input type="text" name="name" value={newCompany.name} onChange={handleChange} required />
