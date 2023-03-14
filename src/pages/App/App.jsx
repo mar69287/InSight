@@ -16,7 +16,6 @@ import UpdateCompanyPage from '../UpdateCompanyPage/UpdateCompanyPage';
 import AddEmployeePage from '../AddEmployeePage/AddEmployeePage';
 import EditEmployeePage from '../EditEmployeePage/EditEmployeePage';
 import CalendarPage from '../CalendarPage/CalendarPage';
-import AboutPage from '../AboutPage/AboutPage';
 import HomeNav from '../../components/HomeNav/HomeNav';
 import NavBar from '../../components/NavBar/NavBar'
 import SideMenu from '../../components/SideMenu/SideMenu'
@@ -33,7 +32,7 @@ export default function App() {
             <NavBar user={user} lightMode={lightMode} setLightMode={setLightMode} />
             <SideMenu />
             <Routes>
-              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/dashboard" element={<DashboardPage lightMode={lightMode} />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/calendar" element={<CalendarPage user={user} />} />
               <Route path="/companies" element={<CompaniesPage />} />

@@ -33,7 +33,7 @@ a {
 
 .company-data>div {
     width: 22%;
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     padding: 1.5rem;
     background-color: rgb(99, 48, 238);
     text-align: center;
@@ -60,6 +60,7 @@ a {
     background-color: rgb(47, 56, 65);
     padding: 1.5rem;
     border-radius: .5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .graph-title {

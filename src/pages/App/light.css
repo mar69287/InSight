@@ -105,11 +105,17 @@
 
 .light .company-detail>h1,
 .light .form-container>h1,
-.light .calendar {
+.light .calendar,
+.light .graph-title h1,
+.light .graph-title p {
     color: rgb(49, 51, 90);
 }
 
 
 .light .fc-theme-standard td {
     border: 1px solid rgb(102, 102, 102);
+}
+
+.light .graphs {
+    background-color: rgb(255, 255, 255);
 }

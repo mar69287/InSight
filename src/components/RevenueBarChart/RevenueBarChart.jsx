@@ -2,7 +2,7 @@ import { ResponsiveBar } from '@nivo/bar'
 import { useState, useEffect } from 'react';
 import { getCompanies } from '../../utilities/companies-api';
 
-export default function RevenueBarChart() {
+export default function RevenueBarChart({ lightMode }) {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -20,7 +20,7 @@ export default function RevenueBarChart() {
     const lineGraphSettings = {
         theme: {
             fontSize: '.9rem',
-            textColor: '#7d8a99',
+            textColor: lightMode ? '#31335a' : '#7d8a99',
         },
     };
 
@@ -61,7 +61,7 @@ export default function RevenueBarChart() {
             axisBottom={{
                 tickSize: 5,
                 tickPadding: 10,
-                tickRotation: -45,
+                // tickRotation: -45,
                 tickTextColor: '#333333'
             }}
             axisLeft={{

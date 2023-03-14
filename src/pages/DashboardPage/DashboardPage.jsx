@@ -8,7 +8,7 @@ import { getCompanies } from '../../utilities/companies-api'
 import { getEvents } from '../../utilities/events-api'
 import './DashboardPage.css';
 
-export default function DashboardPage() {
+export default function DashboardPage({ lightMode }) {
     const [companies, setCompanies] = useState([]);
     const [totalEmployees, setTotalEmployees] = useState(0);
     const [totalSales, setTotalSales] = useState(0);
@@ -96,7 +96,7 @@ export default function DashboardPage() {
                         </div>
                     </div>
                     <div className="graph-container">
-                        <RevenueBarChart />
+                        <RevenueBarChart lightMode={lightMode} />
                     </div>
 
                 </section>
@@ -110,7 +110,7 @@ export default function DashboardPage() {
                     </div>
 
                     <div className="graph-container">
-                        <SalesBarChart />
+                        <SalesBarChart lightMode={lightMode} />
                     </div>
                 </section>
                 <div>
