@@ -76,7 +76,7 @@ export default function CalendarPage({ user }) {
     }
 
     return (
-        <section className='dashboard-home'>
+        <section className='content-container flex-row'>
 
             <div className="calendar-container">
 
