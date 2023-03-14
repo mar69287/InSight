@@ -15,7 +15,7 @@ import UpdateCompanyPage from '../UpdateCompanyPage/UpdateCompanyPage';
 import AddEmployeePage from '../AddEmployeePage/AddEmployeePage';
 import EditEmployeePage from '../EditEmployeePage/EditEmployeePage';
 import CalendarPage from '../CalendarPage/CalendarPage';
-// import PaymentPage from '../PaymentPage/PaymentPage';
+import AboutPage from '../AboutPage/AboutPage';
 import HomeNav from '../../components/HomeNav/HomeNav';
 import NavBar from '../../components/NavBar/NavBar'
 import SideMenu from '../../components/SideMenu/SideMenu'
@@ -49,6 +49,7 @@ export default function App() {
             <HomeNav />
             <Routes>
               <Route path="/" element={<HomePage />} />
+              {/* <Route path="/about" element={<AboutPage />} /> */}
               <Route path="/login" element={<LoginPage setUser={setUser} />} />
               <Route path="/signup" element={<SignupPage setUser={setUser} />} />
             </Routes>

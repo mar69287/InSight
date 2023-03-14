@@ -6,6 +6,7 @@
     font-size: 1.5rem;
     padding: .7rem 1.3rem;
     transition: all .3s;
+    margin-bottom: 10rem;
 }
 
 .login:hover,
@@ -14,13 +15,19 @@
 }
 
 .header-home {
-    min-height: calc(100vh - 70px);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to bottom right, rgb(96, 40, 80), rgb(20, 31, 56), rgb(39, 59, 102));
 }
+
+
 
 .title {
     width: 100%;
@@ -31,8 +38,72 @@
     margin: 0;
     margin-bottom: .8rem;
     font-size: 3.6rem;
+    color: rgb(255, 255, 255);
 }
 
 .title h1>span {
     color: rgb(246, 67, 67);
+}
+
+img {
+    width: 70rem;
+    height: 40rem;
+    position: absolute;
+    bottom: -20rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 1.3rem;
+    border: .7rem solid rgb(147, 147, 147);
+    /* border-bottom: 0; */
+    transition: all .4s;
+}
+
+/* .home-content {
+    margin-top: calc(100vh + 18rem);
+    width: 80%;
+}
+
+.home-content p {
+    font-size: 1.3rem;
+} */
+
+
+
+
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0;
+    margin-top: calc(100vh + 18rem);
+}
+
+.card {
+    width: 20%;
+    padding: 2rem;
+    /* margin: 2rem; */
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    text-align: center;
+    /* height: 13rem; */
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    background-color: #604050;
+    background-image: linear-gradient(45deg, #e86c33, #330092);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.7);
 }

@@ -3,10 +3,12 @@
     justify-content: space-between;
     align-items: center;
     padding: .6rem 2rem;
-    background-color: rgb(63, 71, 81);
-    width: 100%;
-    position: fixed;
+    /* background-color: rgb(63, 71, 81); */
+    width: 80%;
+    position: absolute;
     top: 0;
+    z-index: 3;
+    margin-top: 1rem;
 }
 
 .logo a {
@@ -28,6 +30,6 @@
     background-color: rgb(246, 67, 67);
     border-radius: 5px;
     font-size: 1.2rem;
-    padding: .6rem .9rem;
+    padding: .6rem 1.3rem;
     transition: all .3s;
 }

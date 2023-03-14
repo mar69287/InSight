@@ -9,16 +9,6 @@
     flex-direction: column;
 }
 
-.home-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    padding: .6rem 2rem;
-    background-color: rgb(63, 71, 81);
-    width: 100%;
-}
 
 form p {
     text-align: center;
