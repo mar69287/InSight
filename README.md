@@ -30,3 +30,4 @@ https://insight-official.herokuapp.com/
 * add more graphs for the remaining data
 * allow user to customize different settings and colors
 * how to make monthly payments using stripe
+* add responsiveness to all screen sizes
