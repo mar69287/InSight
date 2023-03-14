@@ -18,7 +18,7 @@ export default function UpdateCompanyPage({ user }) {
     }, []);
 
     return (
-        <section className='dashboard-home'>
+        <section className='content-container '>
             {company ? (
                 <>
                     <h1 className='add-title'>Edit Company</h1>

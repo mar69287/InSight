@@ -18,7 +18,7 @@ export default function EditEmployeePage() {
     }, []);
 
     return (
-        <section className='dashboard-home'>
+        <section className='content-container center-page'>
             {employee ? (
                 <div className="add-employee">
                     <h1 className='add-title'>Edit Employee</h1>
