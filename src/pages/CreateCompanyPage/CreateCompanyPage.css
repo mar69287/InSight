@@ -22,7 +22,7 @@ input[type="checkbox"] {
 }
 
 .add-company-container input {
-    background: rgb(51, 61, 71);
+    /* background: rgb(51, 61, 71); */
     color: rgb(161, 183, 204);
     box-shadow: none;
     border: 1px solid #424e5a;

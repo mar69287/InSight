@@ -1,7 +1,7 @@
-.settings {
+.dash-nav .settings {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: .6rem .5rem;
     background-color: rgb(46, 56, 64);
@@ -10,6 +10,8 @@
     top: 70px;
     right: 0;
     z-index: 5;
+    height: 8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .settings a {
@@ -24,4 +26,18 @@
 
 .settings a:hover {
     color: rgb(246, 67, 67);
+}
+
+.settings button {
+    background-color: rgb(246, 67, 67);
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    padding: .6rem 1rem;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.settings button:hover {
+    opacity: .7;
 }

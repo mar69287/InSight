@@ -18,10 +18,9 @@ export default function UpdateCompanyPage({ user }) {
     }, []);
 
     return (
-        <section className='content-container '>
+        <section className='content-container flex-center'>
             {company ? (
                 <>
-                    <h1 className='add-title'>Edit Company</h1>
                     <UpdateCompanyForm user={user} company={company} setCompany={setCompany} />
                 </>
             ) : (

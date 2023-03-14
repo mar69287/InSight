@@ -1,0 +1,115 @@
+.light>.dash-nav {
+    background-color: rgb(226, 73, 95);
+}
+
+.light>.dash-nav p,
+.light>.dash-nav i {
+    color: rgb(254, 246, 247);
+}
+
+.light>.side-menu {
+    background-color: rgb(255, 255, 255);
+}
+
+.light>.side-menu .logo p {
+    color: rgb(226, 73, 95);
+}
+
+.light .side-menu li,
+.light .side-menu .menu-links {
+    color: rgb(102, 102, 102);
+}
+
+.light .side-menu .menu-links:hover {
+    color: rgb(246, 67, 67);
+}
+
+.light>.content-container {
+    background-color: rgb(242, 244, 249);
+}
+
+.light .employee-container {
+    background-color: rgb(255, 255, 255);
+}
+
+.light .employee-container h1 {
+    color: rgb(49, 51, 90);
+}
+
+.light .dash-container>div:last-child .employee-container>table th,
+.light .dash-container>div:last-child .employee-container>table td {
+    color: rgb(102, 102, 102);
+}
+
+.light th {
+    border-bottom: 1px solid black;
+}
+
+.light .events-container {
+    background-color: rgb(255, 255, 255);
+}
+
+.light .events-container h1,
+.light .events-container li div:first-child {
+    color: rgb(49, 51, 90)
+}
+
+.light .add-company-container .add-title {
+    color: rgb(49, 51, 90)
+}
+
+.light label {
+    color: rgb(102, 102, 102)
+}
+
+.light .add-company-container input {
+    color: rgb(102, 102, 102)
+}
+
+.light .form-container {
+    background-color: rgb(255, 255, 255)
+}
+
+.light .dash-nav .settings {
+    background-color: rgb(255, 255, 255);
+}
+
+.light .dash-nav .settings a {
+    color: rgb(49, 51, 90);
+}
+
+.light .dash-nav .settings a:hover {
+    color: rgb(246, 67, 67);
+}
+
+.light .company-container {
+    background-color: rgb(255, 255, 255);
+}
+
+.light .company-container h1 {
+    color: rgb(49, 51, 90)
+}
+
+.light .company-container p {
+    color: rgb(102, 102, 102);
+}
+
+.light .employee-container tbody a {
+    color: rgb(102, 102, 102);
+}
+
+.light .money>div {
+    color: rgb(49, 51, 90);
+    background-color: rgb(255, 255, 255);
+}
+
+.light .company-detail>h1,
+.light .form-container>h1,
+.light .calendar {
+    color: rgb(49, 51, 90);
+}
+
+
+.light .fc-theme-standard td {
+    border: 1px solid rgb(102, 102, 102);
+}

@@ -4,3 +4,13 @@
     text-align: center;
     color: rgb(161, 183, 204);
 }
+
+.form-container>h1 {
+    margin-top: 1rem;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

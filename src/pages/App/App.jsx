@@ -1,4 +1,5 @@
 import './App.css';
+import './light.css';
 import { useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { getUser } from '../../utilities/users-service'
@@ -22,17 +23,17 @@ import SideMenu from '../../components/SideMenu/SideMenu'
 
 export default function App() {
   const [user, setUser] = useState(getUser())
+  const [lightMode, setLightMode] = useState(false);
 
   return (
-    <main className="App">
+    <main className={`App ${lightMode ? 'light' : ''}`}>
       {
         user ?
           <>
-            <NavBar user={user} setUser={setUser} />
+            <NavBar user={user} lightMode={lightMode} setLightMode={setLightMode} />
             <SideMenu />
             <Routes>
               <Route path="/dashboard" element={<DashboardPage />} />
-              {/* <Route path="/payment" element={<PaymentPage />} /> */}
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/calendar" element={<CalendarPage user={user} />} />
               <Route path="/companies" element={<CompaniesPage />} />
