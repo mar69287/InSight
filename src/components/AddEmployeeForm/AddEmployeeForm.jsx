@@ -41,6 +41,7 @@ export default function AddEmployeeForm({ companyId }) {
   return (
     <div>
       <div className="form-container">
+        <h1 className='add-title'>Add Employee</h1>
         <form autoComplete="off" onSubmit={handleAddEmployee}>
           <label>Employee Name</label>
           <input type="text" name="name" value={newEmployee.name} onChange={handleChange} required />

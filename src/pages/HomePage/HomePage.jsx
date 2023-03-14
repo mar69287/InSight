@@ -25,7 +25,7 @@ export default function HomePage() {
 
                 <div className='card'>
                     <h2>Accessible Insights</h2>
-                    <p>Get a comprehensive view of your company's performance with detailed revenue, sales, and employee data.</p>
+                    <p>Get a comprehensive view of your company's performance with detailed revenue, sales, and more.</p>
                 </div>
 
                 <div className='card'>
