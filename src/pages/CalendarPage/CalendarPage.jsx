@@ -93,6 +93,7 @@ export default function CalendarPage({ user }) {
                                             year: "numeric",
                                             month: "short",
                                             day: "numeric",
+                                            timeZone: 'UTC'
                                         }).format(new Date(event.start))}
                                     </div>
                                 </div>
@@ -122,8 +123,8 @@ export default function CalendarPage({ user }) {
                         dayMaxEvents={true}
                         select={handleDateClick}
                         eventClick={handleEventClick}
-                        ref={calendarRef} // <-- add this line
-                    // displayEventTime: false
+                        ref={calendarRef}
+                        timeZone="UTC"
                     />
                 </div>
             </div>
