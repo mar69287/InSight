@@ -4,6 +4,9 @@ import './SignupPage.css';
 export default function AuthPage({ setUser }) {
 
     return (
-        <SignUpForm setUser={setUser} />
+        <header className='header-home'>
+
+            <SignUpForm setUser={setUser} />
+        </header>
     )
 }
