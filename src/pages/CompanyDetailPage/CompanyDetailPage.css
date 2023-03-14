@@ -1,7 +1,4 @@
 .company-detail {
-    width: 100%;
-    min-height: calc(100vh - 70px);
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -13,6 +10,7 @@
     text-align: center;
     font-size: 2rem;
     margin: 0;
+    color: rgb(161, 183, 204);
 }
 
 .money {
@@ -22,21 +20,22 @@
     width: 100%;
 }
 
-.money div {
-    background-color: rgb(47, 56, 65);
-    height: 10rem;
-    width: 12rem;
-    padding: 1.5rem;
+.money {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.money div * {
-    margin: 0;
+.money>div {
+    flex-basis: calc(20% - 1rem);
+    margin-bottom: 1rem;
+    background-color: rgb(47, 56, 65);
+    color: rgb(125, 138, 153);
+    padding: 1rem;
+    text-align: center;
+    border-radius: .5rem;
 }
+
 
 .money div h1 {
     font-size: 2rem;

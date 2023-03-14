@@ -1,16 +1,18 @@
 .employee-container {
     background-color: rgb(47, 56, 65);
-    /* color: rgb(125, 138, 153); */
     width: 60%;
     min-height: 10rem;
     padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     position: relative;
+    border-radius: .5rem;
+    color: rgb(125, 138, 153);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+
 }
 
 th,
@@ -20,18 +22,40 @@ td {
     border-bottom: 1px solid rgb(246, 67, 67);
 }
 
-/* tr:hover {
-    background-color: rgb(246, 67, 67);
-    color: white;
-} */
 
 .employee-container>a {
     position: absolute;
     right: 1.5rem;
     top: 1rem;
     transition: all .3s;
+    color: rgb(125, 138, 153);
 }
 
 .employee-container>a:hover {
     color: rgb(246, 67, 67);
+}
+
+.employee-container tbody a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all .4s;
+}
+
+.employee-container tbody a:hover {
+    color: rgb(246, 67, 67);
+    text-decoration: none;
+}
+
+.employee-container tbody button {
+    background-color: rgb(246, 67, 67);
+    border-radius: .2rem;
+    padding: .3rem .5rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.employee-container tbody button:hover {
+    opacity: .8;
 }
