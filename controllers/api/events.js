@@ -27,7 +27,6 @@ async function create(req, res) {
 async function index(req, res) {
     const userId = req.user._id;
     const events = await Event.find({ user: userId });
-    // console.log(events)
 
     res.json(events);
 }

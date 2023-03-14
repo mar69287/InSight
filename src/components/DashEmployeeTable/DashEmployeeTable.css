@@ -6,7 +6,8 @@
 }
 
 .dash-container .employee-container {
-    margin: .75rem;
+    /* margin: .75rem; */
+    margin-right: 1.5rem;
 }
 
 .employee-container h1 {

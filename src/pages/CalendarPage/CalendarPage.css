@@ -21,8 +21,8 @@
     /* background-color: rgb(1, 70, 70); */
     padding: 1rem;
     border-radius: 10px;
-    /* height: 85vh; */
-    height: 100%;
+    height: 85vh;
+    /* height: 100%; */
     overflow: auto;
 }
 
@@ -46,9 +46,25 @@
     flex: 1 1 100%;
     margin-left: 1rem;
     color: white;
-    /* height: 85vh; */
+
 }
 
 .fc-event-time {
     display: none;
+}
+
+@media screen and (max-width: 1030px) {
+    .calendar-container {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .calendar {
+        margin: 0;
+    }
+
+    .calendar-container .events-container {
+        flex: 1 1 45%;
+    }
+
 }

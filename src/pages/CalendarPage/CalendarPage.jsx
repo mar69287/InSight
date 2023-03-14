@@ -16,14 +16,14 @@ export default function CalendarPage({ user }) {
             const events = await getEvents();
             setCurrentEvents(events);
             events.forEach(event => {
-                calendarApi.addEvent({ // <-- add this line
+                calendarApi.addEvent({
                     title: event.title,
                     start: event.start,
                     end: event.end
                 });
             });
         }
-        const calendarApi = calendarRef.current.getApi(); // <-- add this line
+        const calendarApi = calendarRef.current.getApi();
         getAllEvents();
     }, []);
 

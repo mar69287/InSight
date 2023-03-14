@@ -78,3 +78,11 @@ li {
     margin-top: 2rem;
     margin-bottom: .5rem;
 }
+
+@media screen and (max-width: 1030px) {
+    .side-menu {
+        display: none;
+        z-index: 2;
+    }
+
+}
