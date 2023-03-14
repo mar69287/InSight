@@ -16,7 +16,15 @@ https://insight-official.herokuapp.com/
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-Stripe API
+&nbsp; Stripe API
+
+<img width="1458" alt="image" src="https://user-images.githubusercontent.com/104735283/225156946-de5808a5-fcfc-4b69-91f4-28901c8af0a1.png">
+<img width="1461" alt="image" src="https://user-images.githubusercontent.com/104735283/225157307-9f5caab7-9f8d-4f60-809a-ee71c72843d3.png">
+<img width="1455" alt="image" src="https://user-images.githubusercontent.com/104735283/225157464-59de399f-89ee-4dbe-87ee-e30841bf2b66.png">
+<img width="1455" alt="image" src="https://user-images.githubusercontent.com/104735283/225157623-3348e844-59fc-4815-b80f-8071b0993a58.png">
+
+
+
 
 ### Future Enhancements
 * add more graphs for the remaining data
