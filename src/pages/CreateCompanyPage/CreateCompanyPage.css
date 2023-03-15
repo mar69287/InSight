@@ -2,7 +2,7 @@
     font-size: 2.5rem;
     margin-bottom: .5rem;
     text-align: center;
-    color: rgb(161, 183, 204);
+    color: black;
     margin-top: 0;
 }
 
@@ -23,7 +23,7 @@ input[type="checkbox"] {
 
 .add-company-container input {
     /* background: rgb(51, 61, 71); */
-    color: rgb(161, 183, 204);
+    color: black;
     box-shadow: none;
     border: 1px solid #424e5a;
 }

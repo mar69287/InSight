@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Noto+Sans&family=Roboto+Slab:wght@500&display=swap');
+
 .App {
     margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'League Spartan', sans-serif;
+}
+
+p,
+a {
+    font-family: 'Roboto Slab', serif;
 }
