@@ -107,3 +107,111 @@ img {
     font-size: 1.2rem;
     color: rgba(0, 0, 0, 0.7);
 }
+
+@media only screen and (max-width: 600px) {
+
+    .signup {
+        font-size: 1.2rem;
+        padding: .5rem 1rem;
+        margin-bottom: 5rem;
+    }
+
+    .header-home {
+        min-height: 80vh;
+    }
+
+    img {
+        width: 90%;
+        height: auto;
+        bottom: -6rem;
+        border-width: .4rem;
+    }
+
+    .home-content {
+        margin-top: calc(80vh + 10rem);
+        padding: 1rem 0;
+    }
+
+    .card {
+        width: 90%;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+
+    .signup {
+        font-size: 1.3rem;
+        padding: .6rem 1.2rem;
+        margin-bottom: 7rem;
+    }
+
+    img {
+        width: 90%;
+        height: auto;
+        bottom: -12rem;
+        border-width: .5rem;
+    }
+
+    .home-content {
+        margin-top: calc(100vh + 10rem);
+    }
+
+    .card {
+        width: 40%;
+        margin: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .card h2 {
+        font-size: 1.8rem;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media only screen and (m-width: 961px) {
+
+    .signup {
+        margin-bottom: 10rem;
+    }
+
+    img {
+        width: 70rem;
+        height: 40rem;
+        bottom: -20rem;
+        border-width: .7rem;
+    }
+
+    .home-content {
+        margin-top: calc(100vh + 18rem);
+    }
+
+    .card {
+        width: 20%;
+        margin: 2rem;
+        padding: 2rem;
+    }
+
+    .card h2 {
+        font-size: 2rem;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+    }
+
+}
