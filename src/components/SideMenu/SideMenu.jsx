@@ -8,7 +8,7 @@ export default function SideMenu() {
             <div className="logo">
                 <p>InSight</p>
             </div>
-            <ul>
+            <ul className='nav-ul'>
                 <li><Link to="/dashboard" className="menu-links"><div><i class="fa-solid fa-house"></i></div>Dashboard</Link></li>
                 <li className='label'>Companies</li>
                 <li><Link to="/companies/create" className="menu-links"><div><i className="fa-solid fa-plus"></i></div>Add</Link></li>

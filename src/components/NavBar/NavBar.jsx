@@ -1,29 +1,34 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './NavBar.css';
 import Settings from '../../components/Settings/Settings';
 
 export default function NavBar({ user, lightMode, setLightMode }) {
-    let sideMenu = document.querySelector('.side-menu')
     const [showSettings, setShowSettings] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
 
     const handleSettingsClick = () => {
         setShowSettings(!showSettings);
     };
 
-    const handleMenuClick = () => {
-        setShowMenu(!showMenu);
-        if (showMenu) {
-            sideMenu.style.display = 'none';
-        } else {
-            sideMenu.style.display = 'flex';
-        }
-    };
+    useEffect(() => {
+        let hamburgerIcon = document.querySelector('.ham-icon');
+        let sideMen = document.querySelector('.side-menu');
+
+        hamburgerIcon.addEventListener('click', () => {
+            sideMen.classList.toggle('active');
+        });
+
+        // let sideMenuLinks = document.querySelectorAll('.side-menu li a');
+        // sideMenuLinks.forEach(link => {
+        //     link.addEventListener('click', () => {
+        //         sideMen.classList.remove('active');
+        //     });
+        // });
+    }, []);
 
 
     return (
         <nav className='dash-nav'>
-            <i className="fa fa-bars" onClick={handleMenuClick}></i>
+            <i className="fa fa-bars ham-icon"></i>
             <div>
                 <p>Welcome! {user.name}</p>
                 <a className="settings-icon" onClick={handleSettingsClick}>

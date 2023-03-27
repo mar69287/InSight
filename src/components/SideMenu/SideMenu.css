@@ -85,4 +85,8 @@ li {
         z-index: 2;
     }
 
+    .side-menu.active {
+        display: flex;
+    }
+
 }
