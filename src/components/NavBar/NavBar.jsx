@@ -17,14 +17,13 @@ export default function NavBar({ user, lightMode, setLightMode }) {
             sideMen.classList.toggle('active');
         });
 
-        // let sideMenuLinks = document.querySelectorAll('.side-menu li a');
-        // sideMenuLinks.forEach(link => {
-        //     link.addEventListener('click', () => {
-        //         sideMen.classList.remove('active');
-        //     });
-        // });
+        let sideMenuLinks = document.querySelectorAll('.side-menu li a');
+        sideMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sideMen.classList.remove('active');
+            });
+        });
     }, []);
-
 
     return (
         <nav className='dash-nav'>
