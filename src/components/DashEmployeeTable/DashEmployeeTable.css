@@ -1,12 +1,9 @@
 .dash-container>div:last-child .employee-container {
     height: 100%;
     flex: 1 1 100%;
-    /* color: rgb(161, 183, 204); */
-    /* background-color: #2c3e50; */
 }
 
 .dash-container .employee-container {
-    /* margin: .75rem; */
     margin-right: 1.5rem;
 }
 
@@ -20,4 +17,14 @@
 
 .dash-container>div:last-child .employee-container>table td {
     color: rgb(125, 138, 153);
+}
+
+@media screen and (max-width: 500px) {
+    .dash-container .employee-container {
+        margin-right: 0;
+    }
+
+    .employee-container {
+        overflow-x: auto;
+    }
 }

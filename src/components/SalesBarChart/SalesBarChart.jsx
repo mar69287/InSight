@@ -4,6 +4,7 @@ import { getCompanies } from '../../utilities/companies-api';
 
 export default function SalesBarChart({ lightMode }) {
     const [data, setData] = useState([]);
+    const [width, setWidth] = useState(window.innerWidth);
 
     useEffect(() => {
         async function fetchSalesData() {
@@ -15,6 +16,14 @@ export default function SalesBarChart({ lightMode }) {
             setData(salesData);
         }
         fetchSalesData();
+
+        function handleResize() {
+            setWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const lineGraphSettings = {
@@ -29,7 +38,10 @@ export default function SalesBarChart({ lightMode }) {
             data={data}
             keys={['Sales']}
             indexBy="id"
-            margin={{ top: 10, right: 50, bottom: 50, left: 70 }}
+            margin={{
+                top: 10, right: width > 700 ? 50 : 10,
+                bottom: width > 700 ? 50 : 10, left: 70
+            }}
             padding={0.5}
             valueScale={{ type: 'linear' }}
             indexScale={{ type: 'band', round: true }}
@@ -58,12 +70,11 @@ export default function SalesBarChart({ lightMode }) {
             borderColor={{ theme: 'background' }}
             axisTop={null}
             axisRight={null}
-            axisBottom={{
+            axisBottom={width > 700 ? {
                 tickSize: 5,
                 tickPadding: 10,
-                // tickRotation: -45,
                 tickTextColor: '#333333'
-            }}
+            } : null}
             axisLeft={{
                 tickSize: 6,
                 tickPadding: 10,

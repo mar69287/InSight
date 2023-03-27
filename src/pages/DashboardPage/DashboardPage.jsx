@@ -77,16 +77,6 @@ export default function DashboardPage({ lightMode }) {
                         <p>Inventory</p>
                     </div>
                 </div>
-                {/* <div className="money">
-                    <div className="sales">
-                        <h1>{`$${totalSales}`}</h1>
-                        <p>Sales</p>
-                    </div>
-                    <div className="revenue">
-                        <h1>{`$${totalRevenue}`}</h1>
-                        <p>Revenue</p>
-                    </div>
-                </div> */}
                 <section className="graphs">
                     <div className="graph-title">
                         <h1>Revenue Report</h1>
