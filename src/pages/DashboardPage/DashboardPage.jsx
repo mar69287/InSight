@@ -18,6 +18,7 @@ export default function DashboardPage({ lightMode }) {
     const [allEmployees, setAllEmployees] = useState([]);
     const [events, setEvents] = useState([]);
 
+    
     useEffect(() => {
         async function getAll() {
             const companies = await getCompanies();

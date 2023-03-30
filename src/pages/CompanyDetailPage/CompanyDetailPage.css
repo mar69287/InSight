@@ -73,5 +73,6 @@
     right: 7rem;
     border: none;
     transition: all .3s;
+    font-family: 'Roboto Slab', serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }

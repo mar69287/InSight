@@ -15,6 +15,7 @@ export default function NavBar({ user, lightMode, setLightMode }) {
 
         hamburgerIcon.addEventListener('click', () => {
             sideMen.classList.toggle('active');
+            // console.log('working')
         });
 
         let sideMenuLinks = document.querySelectorAll('.side-menu li a');

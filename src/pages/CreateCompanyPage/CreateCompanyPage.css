@@ -2,7 +2,7 @@
     font-size: 2.5rem;
     margin-bottom: .5rem;
     text-align: center;
-    color: black;
+    color: rgb(161, 183, 204);
     margin-top: 0;
 }
 
@@ -26,4 +26,19 @@ input[type="checkbox"] {
     color: black;
     box-shadow: none;
     border: 1px solid #424e5a;
+}
+
+@media screen and (max-width: 850px) {
+    .add-company-container{
+        width: 75%;
+    }
+
+    
+}
+@media screen and (max-width: 500px) {
+    .add-company-container{
+        width: 90%;
+    }
+
+
 }
