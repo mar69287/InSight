@@ -14,3 +14,13 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 450px) {
+    .add-employee .add-title {
+        font-size: 2.3rem;
+    }
+
+    .content-container .add-employee{
+        width: 100%;
+    }
+}

@@ -21,7 +21,7 @@ export default function EditEmployeePage() {
         <section className='content-container center-page'>
             {employee ? (
                 <div className="add-employee">
-                    <h1 className='add-title'>Edit Employee</h1>
+                    {/* <h1 className='add-title'>Edit Employee</h1> */}
                     <EditEmployeeForm companyId={companyId} employee={employee} setEmployee={setEmployee} />
                 </div>
             ) : (

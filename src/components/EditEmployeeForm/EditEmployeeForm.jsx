@@ -37,6 +37,7 @@ export default function EditEmployeeForm({ companyId, employee, setEmployee }) {
   return (
     <div>
       <div className="form-container">
+      <h1 className='add-title'>Edit Employee</h1>
         <form autoComplete="off" onSubmit={handleEditEmployee}>
           <label>Employee Name</label>
           <input type="text" name="name" value={editEmployee.name} onChange={handleChange} required />
